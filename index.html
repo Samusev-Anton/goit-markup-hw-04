@@ -22,17 +22,28 @@
           ><span class="web">Web</span>Studio</a
         >
         <nav>
-          <ul class="navi">
-            <li class="list"><a class="link" href="./index.html">Cтудия</a></li>
+          <ul class="navi-pages">
             <li class="list">
-              <a class="link" href="./portfolio.html">Портфолио</a>
+              <a class="link link-pages current-page" href="./index.html"
+                >Cтудия</a
+              >
             </li>
-            <li class="list"><a class="link" href="">Контакты</a></li>
+            <li class="list">
+              <a class="link link-pages current-page" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="list">
+              <a class="link link-pages current-page" href="">Контакты</a>
+            </li>
           </ul>
         </nav>
         <ul class="contacts">
           <li class="list">
-            <a class="link" lang="en" href="mailto:info@devstudio.com"
+            <a
+              class="link link-pages"
+              lang="en"
+              href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
@@ -43,28 +54,25 @@
       </div>
     </header>
     <main>
-      <p style="color: red">
-        НЕ МОГУ РАЗОБРАТЬСЯ С ПОДСВЕТКОЙ CCЫЛКИ АКТИВНОЙ СТРАНИЦЫ. СДЕЛАЛ ЧЕРЕЗ
-        :VISITED. пОДСВЕЧИВАЮТСЯ СРАЗУ 3, КАК СЕЙЧАС. ПОДСКАЖИТЕ, ПОЖАЛУЙСТА
-      </p>
-
       <!--заголовок-->
-      <section class="main">
-        <h1 class="header">Эффективные решения для вашего бизнеса</h1>
-        <button class="button order" type="button" name="order_service">
-          <p style="color: red">Не получается в фигме узнать цвет :hover</p>
-          Заказать услугу
-        </button>
+      <section class="home">
+        <div class="conteiner">
+          <h1 class="header">Эффективные решения для вашего бизнеса</h1>
+          <button
+            class="button order-button"
+            type="button"
+            name="order_service"
+          >
+            Заказать услугу
+          </button>
+        </div>
       </section>
       <!--Soft skills-->
       <section class="skills">
         <div class="conteiner">
           <h2 hidden>Soft skills</h2>
           <ul class="list skill">
-            <li class="item">
-              <div class="decor">
-                <img src="./img/antenna.svg" alt="антена" />
-              </div>
+            <li class="item antena">
               <h3 class="title">Внимание к деталям</h3>
               <p class="text">
                 Идейные соображения, а также начало повседневной работы по
@@ -72,9 +80,6 @@
               </p>
             </li>
             <li class="item">
-              <div class="decor">
-                <img src="./img/Vector.svg" alt="вектор" />
-              </div>
               <h3 class="title">Пунктуальность</h3>
               <p class="text">
                 Задача организации, в особенности же рамки и место обучения
@@ -82,9 +87,6 @@
               </p>
             </li>
             <li class="item">
-              <div class="decor">
-                <img src="./img/diagram.svg" alt="диаграмма" />
-              </div>
               <h3 class="title">Планирование</h3>
               <p class="text">
                 Равным образом консультация с широким активом в значительной
@@ -92,9 +94,6 @@
               </p>
             </li>
             <li class="item">
-              <div class="decor">
-                <img src="./img/astronaut.svg" alt="астронафт" />
-              </div>
               <h3 class="title">Современные технологии</h3>
               <p class="text">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -107,9 +106,9 @@
 
       <!--Виды работ-->
       <section class="prodaction">
-        <h2 hidden>Чем мы занимаемся</h2>
-        <div class="conteiner work">
-          <ul class="list">
+        <div class="conteiner">
+          <h2 class="title">Чем мы занимаемся</h2>
+          <ul class="list work">
             <li class="item">
               <img
                 class="image"
@@ -142,188 +141,180 @@
       <section class="team">
         <div class="conteiner">
           <h2 class="title">Наша команда</h2>
-          <div class="man">
-            <ul class="list">
-              <li class="item">
-                <img
-                  class="foto"
-                  src="./img/foto(1).jpg"
-                  alt="Product Designer"
-                  width="270"
-                  height="260"
-                />
+          <ul class="list team-list">
+            <li class="item">
+              <img
+                class="foto"
+                src="./img/foto(1).jpg"
+                alt="Product Designer"
+                width="270"
+                height="260"
+              />
+              <div class="caption-foto">
                 <h3 class="name">Игорь Демьяненко</h3>
-                <p class="position" lang="en">Product Designer</p>
-                <div class="social-network">
-                  <ul class="list">
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse1.svg" alt="инстаграм"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse2.svg" alt="твитер"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse3.svg" alt="фейсбук"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse4.svg" alt="линкэдин"
-                      /></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="item">
-                <img
-                  class="foto"
-                  src="./img/foto(2).jpg"
-                  alt="Frontend Developer"
-                  width="270"
-                  height="260"
-                />
+                <p class="profession" lang="en">Product Designer</p>
+                <ul class="list userpic-list">
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse1.svg" alt="инстаграм"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="./img/Ellipse2.svg" alt="твитер" /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse3.svg" alt="фейсбук"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse4.svg" alt="линкэдин"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="item">
+              <img
+                class="foto"
+                src="./img/foto(2).jpg"
+                alt="Frontend Developer"
+                width="270"
+                height="260"
+              />
+              <div class="caption-foto">
                 <h3 class="name">Ольга Репина</h3>
-                <p class="position" lang="en">Frontend Developer</p>
-                <div class="social-network">
-                  <ul class="list">
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse1.svg" alt="инстаграм"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse2.svg" alt="твитер"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse3.svg" alt="фейсбук"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse4.svg" alt="линкэдин"
-                      /></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="item">
-                <img
-                  class="foto"
-                  src="./img/foto(3).jpg"
-                  alt="Marketing"
-                  width="270"
-                  height="260"
-                />
+                <p class="profession" lang="en">Frontend Developer</p>
+                <ul class="list userpic-list">
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse1.svg" alt="инстаграм"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="./img/Ellipse2.svg" alt="твитер" /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse3.svg" alt="фейсбук"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse4.svg" alt="линкэдин"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="item">
+              <img
+                class="foto"
+                src="./img/foto(3).jpg"
+                alt="Marketing"
+                width="270"
+                height="260"
+              />
+              <div class="caption-foto">
                 <h3 class="name">Николай Тарасов</h3>
-                <p class="position" lang="en">Marketing</p>
-                <div class="social-network">
-                  <ul class="list">
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse1.svg" alt="инстаграм"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse2.svg" alt="твитер"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse3.svg" alt="фейсбук"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse4.svg" alt="линкэдин"
-                      /></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="item">
-                <img
-                  class="foto"
-                  src="./img/foto(4).jpg"
-                  alt="UI Designer"
-                  width="270"
-                  height="260"
-                />
+                <p class="profession" lang="en">Marketing</p>
+                <ul class="list userpic-list">
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse1.svg" alt="инстаграм"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="./img/Ellipse2.svg" alt="твитер" /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse3.svg" alt="фейсбук"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse4.svg" alt="линкэдин"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="item">
+              <img
+                class="foto"
+                src="./img/foto(4).jpg"
+                alt="UI Designer"
+                width="270"
+                height="260"
+              />
+              <div class="caption-foto">
                 <h3 class="name">Михаил Ермаков</h3>
-                <p class="position" lang="en">UI Designer</p>
-                <div class="social-network">
-                  <ul class="list">
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse1.svg" alt="инстаграм"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse2.svg" alt="твитер"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse3.svg" alt="фейсбук"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./img/Ellipse4.svg" alt="линкэдин"
-                      /></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
+                <p class="profession" lang="en">UI Designer</p>
+                <ul class="list userpic-list">
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse1.svg" alt="инстаграм"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="./img/Ellipse2.svg" alt="твитер" /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse3.svg" alt="фейсбук"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="./img/Ellipse4.svg" alt="линкэдин"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <!--постоянные клиенты-->
-      <section class="clients conteiner">
-        <h2 class="title">Наши клиенты</h2>
-        <ul class="list client">
-          <li class="item">
-            <a href="">
-              <img src="./img/Client1.svg" alt="ya &amp; co" />
-            </a>
-          </li>
+      <section class="clients">
+        <div class="conteiner">
+          <h2 class="title">Наши клиенты</h2>
+          <ul class="list client">
+            <li class="item">
+              <a href="">
+                <img src="./img/Client1.svg" alt="ya &amp; co" />
+              </a>
+            </li>
 
-          <li class="item">
-            <a href="">
-              <img src="./img/Client2.svg" alt="compani tagline here" />
-            </a>
-          </li>
-          <li class="item">
-            <a href="">
-              <img src="./img/Client3.svg" alt="company" />
-            </a>
-          </li>
-          <li class="item">
-            <a href="">
-              <img src="./img/Client4.svg" alt="foster peters" />
-            </a>
-          </li>
-          <li class="item">
-            <a href="">
-              <img src="./img/Client5.svg" alt="brad" />
-            </a>
-          </li>
-          <li class="item">
-            <a href="">
-              <img src="./img/Client6.svg" alt="company tag line" />
-            </a>
-          </li>
-        </ul>
+            <li class="item">
+              <a href="">
+                <img src="./img/Client2.svg" alt="compani tagline here" />
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./img/Client3.svg" alt="company" />
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./img/Client4.svg" alt="foster peters" />
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./img/Client5.svg" alt="brad" />
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./img/Client6.svg" alt="company tag line" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -356,19 +347,19 @@
           </address>
         </div>
         <div class="acide skins-footer">
-          <h2 class="title">присоединяйтесь</h2>
+          <p class="text">присоединяйтесь</p>
           <ul class="list skins">
             <li class="skin">
-              <a href=""><img src="./img/Ellipse1.svg" alt="инстаграм" /></a>
+              <a class="instagram" href=""></a>
             </li>
             <li class="skin">
-              <a href=""><img src="./img/Ellipse2.svg" alt="твитер" /></a>
+              <a class="twitter" href=""></a>
             </li>
             <li class="skin">
-              <a href=""><img src="./img/Ellipse3.svg" alt="фейсбук" /></a>
+              <a class="facebook" href=""></a>
             </li>
             <li class="skin">
-              <a href=""><img src="./img/Ellipse4.svg" alt="линкэдин" /></a>
+              <a class="linkedin" href=""></a>
             </li>
           </ul>
         </div>
@@ -376,3 +367,12 @@
     </footer>
   </body>
 </html>
+<ul>
+  <li class="item antena">
+    <h3 class="title">Внимание к деталям</h3>
+    <p class="text">
+      Идейные соображения, а также начало повседневной работы по формированию
+      позиции.
+    </p>
+  </li>
+</ul>

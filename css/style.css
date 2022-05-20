@@ -35,13 +35,7 @@ ul {
   margin-bottom: 0;
   padding: 0;
 }
-.main,
-.team,
-footer {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .conteiner {
   width: 1200px;
   padding-left: 15px;
@@ -102,17 +96,21 @@ footer {
   letter-spacing: 0.03em;
 }
 
-.navi {
+.navi-pages {
   display: flex;
-  padding: 32px 0;
   margin-left: 93px;
 }
 
-.navi .list + .list {
+.navi-pages .link {
+  display: inline-block;
+  padding: 32px 0;
+}
+
+.navi-pages .list + .list {
   margin-left: 50px;
 }
 
-.navi .link {
+.link-pages {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -120,25 +118,25 @@ footer {
   letter-spacing: 0.02em;
 }
 
-.navi .link:visited {
-  color: violet;
+.current-page,
+.link-pages:hover {
+  color: var(--accent-color);
 }
 
-.navi .link:hover,
-.navi .link:focus {
+.link-pages:focus {
   color: var(--accent-color);
 }
 
 .contacts {
   display: flex;
-  padding: 32px 0;
   margin-left: auto;
 }
-.contacts .list + .list {
-  margin-left: 30px;
-}
 
-.contacts .link + .link {
+.contacts .link {
+  display: inline-block;
+  padding: 32px 0;
+}
+.contacts .list + .list {
   margin-left: 30px;
 }
 
@@ -155,6 +153,7 @@ footer {
   color: var(--accent-color);
 }
 
+.home,
 .skills,
 .prodaction,
 .team,
@@ -165,27 +164,43 @@ footer {
 }
 
 /*заголовок*/
-.main {
-  background: var(--black-back);
+.home {
+  background-color: #c4c4c4;
+  margin: 0 auto;
+  max-height: 600px;
+  max-width: 1600px;
 
-  text-align: center;
-  padding: 200px 452px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/fon-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.main .header {
+.home .conteiner {
+  text-align: center;
+}
+
+.header {
+  display: flexbox;
   margin-bottom: 30px;
   color: var(--white);
-
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 60px;
   letter-spacing: 0.06em;
-  text-align: center;
   text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*button*/
-.main .order {
+.order-button {
   background-color: var(--accent-color);
   color: var(--white);
 
@@ -193,31 +208,38 @@ footer {
   min-width: 200px;
 }
 
-.main .order:hover,
-.main .order:focus {
-  background-color: #f5f4fa;
-  color: var(--primary-text-color);
+.order-button:hover,
+.order-button:focus {
+  background-color: #188ce8;
+  color: var(--white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-/*soft skills*/
-.skills .list {
-  display: flex;
-}
+/*soft skills
+.skill {
+  display: flex;}*/
+
 .skill .item {
+}
+
+.antena {
   width: 270px;
+}
+.antena::before {
+  content: "";
+  height: 120px;
+  display: block;
+  background-color: #757575;
+  background-image: url(../img/svg/astronaut.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 30px;
 }
 
 .skill .item + .item {
   margin-left: 30px;
 }
 
-.decor {
-  background-color: #f5f4fa;
-
-  padding: 25px 100px;
-  margin-bottom: 30px;
-}
 .skills .title {
   margin-bottom: 10px;
 
@@ -236,7 +258,16 @@ footer {
   letter-spacing: 0.03em;
 }
 /*виды работ*/
-.work .list {
+.prodaction .title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.work {
   display: flex;
   justify-content: space-between;
 }
@@ -250,19 +281,12 @@ footer {
   background: #f5f4fa;
 }
 
-.team .list {
+.team-list {
   display: flex;
-}
-.social-network .list {
-  justify-content: space-around;
-  padding: 16px 32px 16px 30px;
-}
-
-.man .list {
   justify-content: space-between;
 }
 
-.team .item {
+.team-list .item {
   background: var(--white);
 
   text-align: center;
@@ -277,12 +301,11 @@ footer {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
-.team .foto {
+.team-list .foto {
   width: 270px;
-  margin-bottom: 30px;
 }
 
-.team .name {
+.team-list .name {
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -292,25 +315,30 @@ footer {
   margin-bottom: 10px;
 }
 
-.team .position {
+.profession {
   color: var(--secondary-text-color);
 
   font-weight: normal;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 }
 
-.social-network {
-  background-color: ;
+.userpic-list {
+  display: flex;
+  justify-content: center;
+}
+
+.userpic-list li + li {
+  margin-left: 10px;
+}
+.caption-foto {
+  padding: 30px 32px;
 }
 /*наши клиенты*/
-.clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .clients .title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
@@ -328,21 +356,17 @@ footer {
 /*футер*/
 .footer {
   background: var(--black-back);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer .conteiner {
   display: flex;
   background: var(--black-back);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  align-items: center;
 }
 
-.footer .list {
-  display: block;
-  margin-top: 20px;
-}
-
-.acide .skins {
+.skins {
   display: flex;
 }
 
@@ -351,6 +375,8 @@ footer {
 }
 
 .footer .logo {
+  display: block;
+  margin-bottom: 20px;
   color: var(--white);
 }
 
@@ -388,7 +414,8 @@ footer {
   color: var(--accent-color);
 }
 
-.footer .title {
+.skins-footer .text {
+  margin-bottom: 20px;
   color: var(--white);
 
   font-size: 14px;
@@ -400,14 +427,73 @@ footer {
 .skins-footer {
   margin-left: 70px;
 }
+
+.instagram {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-image: url(../img/svg/instagram-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.twitter {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-image: url(../img/svg/twitter-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.facebook {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-image: url(../img/svg/facebook-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.linkedin {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-image: url(../img/svg/linkedin-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.instagram:hover,
+.twitter:hover,
+.facebook:hover,
+.linkedin:hover {
+  background-color: var(--accent-color);
+}
+
+.instagram:focus,
+.twitter:focus,
+.facebook:focus,
+.linkedin:focus {
+  background-color: var(--accent-color);
+}
+
 /*фильтр*/
-.all {
+.button-all {
   background-color: var(--accent-color);
   color: var(--white);
 }
 
-.filter .all:hover,
-.filter .all:focus {
+.filter .button-all:hover,
+.filter .button-all:focus {
   background-color: #f5f4fa;
   color: var(--primary-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -436,7 +522,7 @@ footer {
   letter-spacing: 0.03em;
 }
 
-.conteiner .filter {
+.filter {
   display: flex;
   justify-content: center;
 }
@@ -445,7 +531,7 @@ footer {
   margin-left: 8px;
 }
 
-.cards .services {
+.services {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
@@ -468,6 +554,8 @@ footer {
 
 .cards .image {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .footnote {
