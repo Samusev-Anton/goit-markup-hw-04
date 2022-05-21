@@ -153,7 +153,6 @@ ul {
   color: var(--accent-color);
 }
 
-.home,
 .skills,
 .prodaction,
 .team,
@@ -169,6 +168,8 @@ ul {
   margin: 0 auto;
   max-height: 600px;
   max-width: 1600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 
   background-image: linear-gradient(
       to right,
@@ -271,6 +272,9 @@ ul {
   letter-spacing: 0.03em;
 }
 /*виды работ*/
+.prodaction {
+  padding-top: 0;
+}
 .prodaction .title {
   font-family: "Roboto";
   font-weight: 700;
@@ -282,7 +286,11 @@ ul {
 }
 .work {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.work .item + .item {
+  margin-left: 30px;
 }
 
 .work .image {
@@ -296,13 +304,17 @@ ul {
 
 .team-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .team-list .item {
   background: var(--white);
 
   text-align: center;
+}
+
+.team-list .item + .item {
+  margin-left: 30px;
 }
 
 .team .title {
@@ -315,6 +327,7 @@ ul {
   margin-bottom: 50px;
 }
 .team-list .foto {
+  display: block;
   width: 270px;
 }
 
@@ -376,7 +389,7 @@ ul {
 .footer .conteiner {
   display: flex;
   background: var(--black-back);
-  align-items: center;
+  align-items: baseline;
 }
 
 .skins {
