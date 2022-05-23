@@ -111,11 +111,22 @@ ul {
 }
 
 .link-pages {
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.nav-link-icon {
+  display: inline-flex;
+  align-items: baseline;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  fill: #757575;
 }
 
 .current-page,
@@ -234,20 +245,15 @@ ul {
 .skill .item {
   width: 270px;
 }
-.antena::before {
-  background-image: url(../img/svg/antenna.svg);
+.skills-blockicon {
+  width: 270px;
+  height: 120px;
 }
 
-.clock::before {
-  background-image: url(../img/svg/clock.svg);
-}
-
-.diagram::before {
-  background-image: url(../img/svg/diagram.svg);
-}
-
-.astronaut::before {
-  background-image: url(../img/svg/astronaut.svg);
+.skills-icon {
+  width: 70px;
+  height: 70px;
+  margin: auto;
 }
 
 .skill .item + .item {
