@@ -11,6 +11,7 @@
   --accent-color: #2196f3;
   --black-back: #2f303a;
   --white: #ffffff;
+  --icon-color: #afb1b8;
 }
 html {
   box-sizing: border-box;
@@ -232,7 +233,7 @@ ul {
   display: flex;
 }
 
-.skill .item::before {
+/*.skill .item::before {
   content: "";
   height: 120px;
   display: block;
@@ -240,20 +241,22 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 30px;
-}
+}*/
 
 .skill .item {
   width: 270px;
 }
 .skills-blockicon {
-  width: 270px;
+  display: flex;
+  padding: 25px 100px;
   height: 120px;
+  background-color: #f5f4fa;
 }
 
 .skills-icon {
+  display: block;
   width: 70px;
   height: 70px;
-  margin: auto;
 }
 
 .skill .item + .item {
@@ -362,6 +365,34 @@ ul {
   justify-content: center;
 }
 
+.userpic-item {
+  padding: 0;
+}
+
+.social-network-link {
+  position: relative;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+.social-network-link:hover,
+.social-network-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-network-icon {
+  display: inline-block;
+  position: absolute;
+  right: 25%;
+  bottom: 25%;
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+
 .userpic-list li + li {
   margin-left: 10px;
 }
@@ -380,6 +411,26 @@ ul {
 
 .client {
   display: flex;
+}
+
+.client-link {
+  width: 168px;
+  height: 90px;
+  border: 1px solid rgba(175, 177, 184, 1);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.client-icon {
+  display: inline-block;
+  width: 106px;
+  height: 60px;
+  fill: var(--icon-color);
+}
+
+.client-icon:hover,
+.client-icon:focus {
+  fill: var(--accent-color);
 }
 
 .client .item + .item {
@@ -460,6 +511,26 @@ ul {
   margin-left: 70px;
 }
 
+.white-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+}
+.white-link:hover,
+.white-link:focus {
+  background-color: var(--accent-color);
+}
+
+.white-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  fill: var(--white);
+}
+
+/*
 .instagram {
   display: inline-block;
   width: 44px;
@@ -516,7 +587,7 @@ ul {
 .facebook:focus,
 .linkedin:focus {
   background-color: var(--accent-color);
-}
+}*/
 
 /*фильтр*/
 .button-all {
