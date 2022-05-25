@@ -427,11 +427,9 @@ ul {
   height: 90px;
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
-  padding: 16px 32px;
 }
 
 .client-icon {
-  display: inline-block;
   width: 106px;
   height: 60px;
   fill: var(--icon-color);
