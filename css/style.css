@@ -420,6 +420,9 @@ ul {
 }
 
 .client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 168px;
   height: 90px;
   border: 1px solid rgba(175, 177, 184, 1);
