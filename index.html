@@ -72,13 +72,14 @@
       <section class="home">
         <div class="conteiner">
           <h1 class="header">Эффективные решения для вашего бизнеса</h1>
-          <button
-            class="button order-button"
-            type="button"
-            name="order_service"
-          >
+          <button class="button order-button" data-modal-open>
             Заказать услугу
           </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="close-modal" data-modal-close>X</button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -477,5 +478,19 @@
         </div>
       </div>
     </footer>
+    <script>
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector("[data-modal-open]"),
+          closeModalBtn: document.querySelector("[data-modal-close]"),
+          modal: document.querySelector("[data-modal]"),
+        };
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+        function toggleModal() {
+          refs.modal.classList.toggle("is-hidden");
+        }
+      })();
+    </script>
   </body>
 </html>
