@@ -75,11 +75,17 @@
           <button class="button order-button" data-modal-open>
             Заказать услугу
           </button>
-          <!-- <div class="backdrop is-hidden" data-modal>
+          <div class="backdrop is-hidden" data-modal>
             <div class="modal">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Quaerat vel laboriosam fuga reiciendis, enim ipsam. In inventore
+                voluptate reiciendis. Suscipit ad facere sed incidunt asperiores
+                accusantium aspernatur laboriosam deleniti autem.
+              </p>
               <button class="close-modal" data-modal-close>X</button>
             </div>
-          </div> -->
+          </div>
         </div>
       </section>
 
@@ -478,19 +484,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      (() => {
-        const refs = {
-          openModalBtn: document.querySelector("[data-modal-open]"),
-          closeModalBtn: document.querySelector("[data-modal-close]"),
-          modal: document.querySelector("[data-modal]"),
-        };
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-        function toggleModal() {
-          refs.modal.classList.toggle("is-hidden");
-        }
-      })();
-    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
